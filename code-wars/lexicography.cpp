@@ -5,17 +5,22 @@
 
 using namespace std;
 
-bool compare(int a, int b) {
-    string s1 = to_string(a);
-    string s2 = to_string(b);
-    return s1 + s2 < s2 + s1;
+vector<string> lexicalOrder(int n) {
+    vector<string> nums = { };
+    for (int i = 1; i <= n; ++i) {
+        nums.emplace_back(to_string(i));
+    }
+
+    sort(nums.begin(), nums.end());
+
+    return nums;
 }
 
 int main() {
-    vector<int> nums{ 102, 95, 114, 1421, 50 };
-    sort(nums.begin(), nums.end(), compare);
-    for (auto& n : nums) {
-        cout << n << "\n";
+    for (auto& i : lexicalOrder(13))
+    {
+        std::cout << i << "\n";
     }
+
     return 0;
 }
