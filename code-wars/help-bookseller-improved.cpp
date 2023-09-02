@@ -1,7 +1,5 @@
 #include <string>
 #include <vector>
-#include <sstream>
-#include <algorithm>
 #include <iostream>
 #include <map>
 
@@ -22,7 +20,6 @@ std::string StockList::stockSummary(std::vector<std::string>& lstOfArt, std::vec
 
     std::string result = "";
     for (auto i : categories) {
-        std::cout << i << "\n";
         result = result
             + (result.empty() ? "" : " - ")
             + "(" + i + " : " + std::to_string(sum[i[0]]) + ")";
