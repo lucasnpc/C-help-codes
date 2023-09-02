@@ -25,7 +25,7 @@ std::string StockList::stockSummary(std::vector<std::string>& lstOfArt, std::vec
         std::cout << i << "\n";
         result = result
             + (result.empty() ? "" : " - ")
-            + "(" + i + " : " + std::to_string(sum[i]) + ")";
+            + "(" + i + " : " + std::to_string(sum[i[0]]) + ")";
     }
 
     return result;
