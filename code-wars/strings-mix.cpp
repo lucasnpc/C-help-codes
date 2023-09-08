@@ -44,7 +44,7 @@ std::string Mix::mix(const std::string& s1, const std::string& s2) {
         if (count > 1) {
             auto from = count > c1 ? '2' : count > c2 ? '1' : '=';
             auto str = std::string(count, key);
-            res.push_back(std::string(1, from) + ":" + str);
+            res.emplace_back(std::string(1, from) + ":" + str);
         }
     }
     std::sort(res.begin(), res.end(), [](const auto& a, const auto& b) {
